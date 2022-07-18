@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Course } from '../common/models/course';
+import { CoursesService } from '../common/services/courses.service';
+
+let emptyCourse: Course = {
+  id: null,
+  title: "",
+  description: "",
+  percentComplete: 0,
+  favorite: false,
+}
 
 @Component({
   selector: 'app-courses',
@@ -8,33 +17,51 @@ import { Course } from '../common/models/course';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  selectedCourse: Course = null;
-  courses: Course[] = [
-    {
-      id: '1',
-      title: 'Angular 13 Fundamentals',
-      description: 'Learn the fundamentals of Angular 13',
-      percentComplete: 26,
-      favorite: true,
-    },
-    {
-      id: '2',
-      title: 'New Angular State Management',
-      description: 'Learn the fundamentals of Angular 13',
-      percentComplete: 5,
-      favorite: false,
-    },
-  ];
+  selectedCourse: Course = emptyCourse;
+  courses$;
 
-  constructor() {}
+  constructor(private coursesService: CoursesService) {}
 
-  selectCourse(course):void {
+  ngOnInit(): void {
+    this.getCourses();
+  }
+
+  getCourses() {
+    this.coursesService.all()
+    .subscribe((result) => (this.courses$ = result));
+  }
+
+  selectCourse(course): void {
     this.selectedCourse = course;
   }
 
-  deleteCourse(course):void {
-    console.log(course.id)
+  deleteCourse(courseId): void {
+     this.coursesService
+       .delete(courseId)
+       .subscribe(() => this.getCourses());
   }
 
-  ngOnInit(): void {}
+  saveCourse(course): void {
+    if (course.id) {
+      this.updateCourse(course);
+    } else {
+      this.createCourse(course);
+    }
+  }
+
+  createCourse(course) {
+    this.coursesService
+    .create(course)
+    .subscribe(() => this.getCourses());
+  }
+
+  updateCourse(course) {
+    this.coursesService
+    .update(course.id, course)
+    .subscribe(() => this.getCourses());
+  }
+
+  reset(): void {
+    this.selectCourse({ ...emptyCourse });
+  }
 }

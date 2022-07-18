@@ -1,11 +1,41 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Angular 13 Fundamentals",
-      "description": "Learn the fundamentals of Angular 13",
-      "percentComplete": 26,
+      "id": "2",
+      "title": "New Angular State Management Now",
+      "description": "Learn techniques of Angular 13",
+      "percentComplete": 58,
       "favorite": true
+    },
+    {
+      "id": "LZbfkw6",
+      "title": "Very Create",
+      "description": "New Course",
+      "percentComplete": 69,
+      "favorite": true
+    }
+  ],
+  "lessons": [
+    {
+      "title": "Hello Angular"
+    },
+    {
+      "title": "Component Fundamentals"
+    },
+    {
+      "title": "Template Driven Forms"
+    },
+    {
+      "title": "Angular Services"
+    },
+    {
+      "title": "Server Communication"
+    },
+    {
+      "title": "Component Driven Architecture"
+    },
+    {
+      "title": "Angular Routing"
     }
   ]
 }

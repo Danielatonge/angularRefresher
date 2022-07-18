@@ -5,8 +5,8 @@
   <mat-card-content>
     <!-- LESSON LIST -->
     <mat-list>
-      <mat-list-item *ngFor="let lesson of courseLessons">
-        {{lesson.title}}
+      <mat-list-item *ngFor="let lesson of courseLessons$">
+        {{lesson.title | titlecase}}
       </mat-list-item>
     </mat-list>
   </mat-card-content>

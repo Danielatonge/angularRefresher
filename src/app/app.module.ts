@@ -22,6 +22,8 @@ import { DynamicComponent } from './examples/dynamic/dynamic.component';
 import { CircleComponent } from './examples/dynamic/circle/circle.component';
 import { SquareComponent } from './examples/dynamic/square/square.component';
 import { TriangleComponent } from './examples/dynamic/triangle/triangle.component';
+import { CustomInputComponent } from './examples/custom-input/custom-input.component';
+import { CustomControlComponent } from './examples/custom-input/custom-control/custom-control.component';
 
 @NgModule({
   imports: [
@@ -32,7 +34,7 @@ import { TriangleComponent } from './examples/dynamic/triangle/triangle.componen
     HttpClientModule,
     FormsModule
   ],
-  declarations: [AppComponent, HomeComponent, CoursesComponent, CoursesListComponent, CoursesDetailsComponent, ExamplesComponent, AdminComponent, AdminPayrollComponent, AdminVacationComponent, RouteParamsComponent, ProtectedComponent, LoginComponent, DynamicComponent, CircleComponent, SquareComponent, TriangleComponent],
+  declarations: [AppComponent, HomeComponent, CoursesComponent, CoursesListComponent, CoursesDetailsComponent, ExamplesComponent, AdminComponent, AdminPayrollComponent, AdminVacationComponent, RouteParamsComponent, ProtectedComponent, LoginComponent, DynamicComponent, CircleComponent, SquareComponent, TriangleComponent, CustomInputComponent, CustomControlComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

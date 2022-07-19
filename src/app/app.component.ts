@@ -8,7 +8,7 @@ import { AuthService } from './common/services/auth.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Angular 13 Fundamentals';
+  title = 'Angular Refresher';
   links = [
     { path: '/home', icon: 'home', title: 'Home' },
     { path: '/courses', icon: 'view_list', title: 'Courses' },

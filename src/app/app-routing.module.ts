@@ -6,6 +6,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { AdminPayrollComponent } from './examples/admin/admin-payroll/admin-payroll.component';
 import { AdminVacationComponent } from './examples/admin/admin-vacation/admin-vacation.component';
 import { AdminComponent } from './examples/admin/admin.component';
+import { CustomInputComponent } from './examples/custom-input/custom-input.component';
 import { DynamicComponent } from './examples/dynamic/dynamic.component';
 import { ExamplesComponent } from './examples/examples.component';
 import { ProtectedComponent } from './examples/protected/protected.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
           import('./examples/lazy/lazy.module').then((m) => m.LazyModule),
       },
       { path: 'create', component: DynamicComponent },
+      { path: 'input', component: CustomInputComponent },
     ],
   },
   { path: '**', redirectTo: '/home' },

@@ -18,6 +18,10 @@ import { AdminVacationComponent } from './examples/admin/admin-vacation/admin-va
 import { RouteParamsComponent } from './examples/route-params/route-params.component';
 import { ProtectedComponent } from './examples/protected/protected.component';
 import { LoginComponent } from './login/login.component';
+import { DynamicComponent } from './examples/dynamic/dynamic.component';
+import { CircleComponent } from './examples/dynamic/circle/circle.component';
+import { SquareComponent } from './examples/dynamic/square/square.component';
+import { TriangleComponent } from './examples/dynamic/triangle/triangle.component';
 
 @NgModule({
   imports: [
@@ -28,7 +32,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  declarations: [AppComponent, HomeComponent, CoursesComponent, CoursesListComponent, CoursesDetailsComponent, ExamplesComponent, AdminComponent, AdminPayrollComponent, AdminVacationComponent, RouteParamsComponent, ProtectedComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, CoursesComponent, CoursesListComponent, CoursesDetailsComponent, ExamplesComponent, AdminComponent, AdminPayrollComponent, AdminVacationComponent, RouteParamsComponent, ProtectedComponent, LoginComponent, DynamicComponent, CircleComponent, SquareComponent, TriangleComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

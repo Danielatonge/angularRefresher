@@ -6,6 +6,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { AdminPayrollComponent } from './examples/admin/admin-payroll/admin-payroll.component';
 import { AdminVacationComponent } from './examples/admin/admin-vacation/admin-vacation.component';
 import { AdminComponent } from './examples/admin/admin.component';
+import { DynamicComponent } from './examples/dynamic/dynamic.component';
 import { ExamplesComponent } from './examples/examples.component';
 import { ProtectedComponent } from './examples/protected/protected.component';
 import { RouteParamsComponent } from './examples/route-params/route-params.component';
@@ -43,9 +44,10 @@ const routes: Routes = [
       },
       {
         path: 'lazy',
-        loadChildren: () => import('./examples/lazy/lazy.module')
-        .then((m) => m.LazyModule),
+        loadChildren: () =>
+          import('./examples/lazy/lazy.module').then((m) => m.LazyModule),
       },
+      { path: 'create', component: DynamicComponent },
     ],
   },
   { path: '**', redirectTo: '/home' },
